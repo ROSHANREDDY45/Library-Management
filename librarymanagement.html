@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+     <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type : none;
+
+}
+
+body{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgba(247, 229, 229, 0.952);
+}
+.banner{
+    height:15vh ;
+    text-align: center;
+}
+.banner img{
+    height:105px;
+    padding: 2px 0 5px 0;
+    
+    
+}
+.menu_list{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(66, 59, 59);
+    font-size: 20px;
+    padding: 10px;
+    overflow:hidden;
+}
+
+.menu_btn{
+    text-align:center;
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+}
+
+.menu_btn:hover{
+    background-color:rgb(4, 80, 128);
+}
+.menu_icon{
+    position: absolute;
+    top:110px;
+    right: 10px;
+    width: 40px;
+    cursor: pointer;
+}
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown_content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+.side_bar{
+    float: left;
+    width: 15%;
+    margin-top: 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.imagelist li{
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 20px 15px ;
+    padding-left: 50px;
+    
+}
+.side_btn{
+    padding: 15px 15px 15px 25px;
+    color: rgb(99, 94, 94);
+}
+.imagelist li:hover{
+    background-color: grey;
+    color: white;
+}
+#subject1:hover{
+    background-color: grey;
+    font-weight: 600;
+}
+#subject2:hover{
+    background-color: grey;
+    font-weight: 600;
+}
+#subject3:hover{
+    background-color: grey;
+    font-weight: 600;
+}
+#subject4:hover{
+    background-color: grey;
+    font-weight: 600;
+}
+#subject5:hover{
+    background-color: grey;
+    font-weight: 600;
+}
+.sections{
+    float:left;
+    width: 70%;
+    margin: 30px;
+    padding: 14px 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#section1 h2 {
+    color:rgb(4, 80, 128) ;
+    font-size: 30px;
+}
+#section1 h2 b {
+    color: grey;
+    font-size: 30px;
+
+}
+#section1 p{
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+
+}
+.images{
+    width: 230px;
+    height:230px;
+}
+.container li{
+    padding: 40px;
+    
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+.items{
+    font-size: 20px;
+}
+@media screen and (min-width:900px) {
+    .menu_icon{
+        width:0;
+    }
+    
+}
+@media screen and (min-width:767px) and (max-width:900px) {
+    .side_bar{
+        width:0%;
+    }
+    .menu_icon{
+        width:0;
+    }
+    .sections{
+        width:80%;
+    }
+}
+@media screen and (min-width:605px) and (max-width:767px) {
+    .side_bar{
+        width:0%;
+    }
+    .menu_icon{
+        width:0;
+    }
+    
+    .sections{
+        width: 75%;
+       
+    }
+    
+}
+@media screen and (min-width:467px) and (max-width:605px) {
+    .side_bar{
+        width:0%;
+    }
+    .menu_bar{
+        padding-bottom:0px;
+    }
+    .menu_list{
+        flex-flow: column wrap;
+        width: 100%;
+        height: 50vh;
+        margin-top: -470px;
+        transition: all 4 ease;
+    }
+    .mobile_menu{
+        margin-top: 0px;
+        border-bottom-right-radius:30% ;
+    }
+    .menu_list li{
+        margin: auto;
+
+    }
+    .sections{
+        width:70% ;
+        margin-top: 150px;
+    }
+    
+}
+@media screen and (min-width:300px) and (max-width:467px) {
+    .side_bar{
+        width:0%;
+    }
+    .menu_bar{
+        padding-bottom:0px;
+    }
+    .menu_list{
+        flex-flow: column wrap;
+        width: 100%;
+        height: 50vh;
+        margin-top: -470px;
+        transition: all 4 ease;
+       
+    }
+    .mobile_menu{
+        margin-top: 0px;
+        border-bottom-right-radius:30% ;
+    }
+    .menu_list li {
+        margin: auto;
+
+    }
+    .sections{
+        width:65% ;
+        margin-top: 150px;
+    }
+    
+    
+}
+</style>
+</head>
+<body>
+    <main>
+    <header class="banner">
+        <img src="Images/banner.png" alt="">
+    </header>
+     <nav class="menu_bar">
+         <ul class="menu_list">
+         <li><a href="Home.html" class="menu_btn">Home</a></li>
+         <li class="dropdown"><a href="" class="menu_btn dropdown_btn">Tutorials</a>
+         <div class="dropdown_content">
+             <a href="" class="menu_btn">Subject1</a>
+             <a href="" class="menu_btn">Subject2</a>
+             <a href="" class="menu_btn">Subject3</a>
+             <a href="" class="menu_btn">Subject4</a>
+             <a href="" class="menu_btn">Subject5</a>
+        </div></li>
+         <li><a href="" class="menu_btn">PPT's</a></li>
+         <li><a href="" class="menu_btn">Lecture Notes</a></li>
+         <li><a href="" class="menu_btn">Syllabus</a></li>
+         </ul>
+         <img src="icons/menu_icon.png" alt="" class="menu_icon">
+    </nav>
+
+    <div class="side_bar">
+        <ul class="imagelist">
+            <li class="side_btn" id="tutorials" style="background-image: url(Icons/tutorials_icons.webp);"> <b>Tutorials</b></li><hr />
+            <li class="side_btn" id="subject1" style="background-image: url(icons/subjects.png);"> Subject1</li><hr />
+            <li class="side_btn" id="subject2"style="background-image: url(icons/subjects.png);"> Subject2</li><hr />
+            <li class="side_btn" id="subject3"style="background-image: url(icons/subjects.png);"> Subject3</li><hr />
+            <li class="side_btn" id="subject4"style="background-image: url(icons/subjects.png);"> Subject4</li><hr />
+            <li class="side_btn" id="subject5"style="background-image: url(icons/subjects.png);"> Subject5</li><hr /> 
+            <li class="side_btn" id="ppt's"style="background-image: url(icons/ppt_icons.webp);"> <b>PPT's</b></li><hr />
+            <li class="side_btn" id="lecturenotes"style="background-image: url(icons/note_icons.webp);"> <b>Lecture Notes</b></li><hr />
+            <li class="side_btn" id="syllabus"style="background-image: url(icons/syllabus_icons.webp);"> <b>Syllabus</b></li>
+        </ul>
+    </div>
+    <div class="sections">
+        <section id="section1">
+            <h2>Welcome to <b>Library</b></h2>
+            <p>
+                Library provides <b> Tutorials , Power point Presentations(ppts), Lecture Notes</b> and we provide <b>Syllabus</b> of various subjects.
+            </p> 
+            <div class="container">
+               <li class="items" id="item1"><figure><img src="images/tutorials.webp" alt="" class="images"></figure><figcaption><b><a href="#">Tutorials</a></b></figcaption></li>
+                <li class="items" id="item2"><figure><img src="images/ppt.webp" alt="" class="images"></figure> <figcaption><b><a href="#">PPt's</a></b></figcaption></li>
+                <li class="items" id="item3"><figure><img src="images/notes.webp" alt="" class="images"></figure><figcaption><b><a href="#">Lecture Notes</a></b></figcaption></li>
+                <li class="items" id="item4"><figure><img src="images/syllabus.webp" alt="" class="images"></figure><figcaption><b><a href="#">Syllabus</a></b></figcaption></li>
+                <li class="items" id="item5"><figure><img src="images/videoes.png" alt="" class="images"></figure><figcaption><b><a href="#">videoes</a></b></figcaption></li>
+
+            </div>
+
+        
+ 
+
+
+        </section>
+    </div>
+
+
+</main>
+<script>
+    const menuIcon=document.querySelector('.menu_icon');
+    const menuList=document.querySelector('.menu_list')
+    menuIcon.addEventListener('click',()=>{
+        menuList.classList.toggle('mobile_menu')
+    })
+</script>
+</body>
+</html>
