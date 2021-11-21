@@ -1,7 +1,5 @@
 # Library-Management
 
-* This Project is an extension version of my first project,in this project there are no unwanted code like in my previous project.
-Its a beautifully written code as I improved my skills in writing the code with more efficiently than ever.
-This Project included more and efficient CSS code.
-I made it a Resposive website too.
+* This project is about Library-Management, in this project I tried to club all the study materials of all the 4 years of B.tech for an easy access to students. If you cant find the CSS file,Please check the HTML5 document I might included it in.
+* I made it a Resposive website 
 its still an ongoing project with lots of ideas to fill the gaps in it.
