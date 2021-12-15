@@ -6,124 +6,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departments</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
         *{
             margin: 0;
             padding: 0;
-            list-style-type : none;
-        
-        }
-        
-        body{
+            list-style: none;
+            scroll-behavior: smooth;
+            font-family: 'PT Sans', sans-serif;
             box-sizing: border-box;
-            font-family: sans-serif;
-            background-color: rgba(247, 229, 229, 0.952);
         }
         .banner{
-            height:15vh ;
             text-align: center;
+
         }
-        .banner img{
-            height:150px;
-            padding: 2px 0 5px 0;
+        /* images */
+        .brandLogo{
+            height:120px;
         }
-        .images{
-           width: 290px;
-           height:290px;
+        .deparImg{
+            width: 300px;
+            height: 300px;
         }
-        .container li{
-          padding: 40px;
+        body{
+            background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
         }
         .container{
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-          margin:30px 30px 0px 30px;
+            display: flex;
+            flex-flow: row wrap;
+            margin: 50px 200px 50px 200px;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 30px;
+              
         }
-        .dropdown_content {
-         display: none;
-         position: absolute;
-         background-color: #f9f9f9;
-         min-width: 160px;
-         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-         border-radius: 30px;
- 
-}
-        .dropdown_content a {
-          color: black;
-          padding: 12px 12px;
-          text-decoration: none;
-          display: block;
-          text-align: center;
-}
+        .subContainer,.sub{
+            width: 300px;
+            height: 550px;
+            /* border: 1px solid black; */
+            margin-bottom: 50px;
+            margin-top: 30px;
+            display: flex;
+            flex-flow: wrap column;
+            transition: transform 0.5s ease;
+            text-align: center;
+            box-shadow: 5px 5px 6px 0px rgb(0, 0, 0,0.2), 5px 5px 6px 0px rgb(0,0,0,0.19) ; 
 
-.dropdown_content a:hover {
-    background-color: #f1f1f1;
-    border-radius: 30px;
+        }
+        .Btn{
+            position: relative;
+            top: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-image: linear-gradient(135deg, #d7d2cc 10%, #304352 100%);
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .Btn:hover{
+            background-image: linear-gradient(135deg, #243949 10%, #517fa4 100%);
+        }
+        
+        
+        .subContainer:hover{
+            
+             transform: translateY(1.5rem);
 
-}
+            
+        }
+        .sub:hover{
+            
+             transform: translateY(-1.5rem);
+        }
+        .years{
+            display:  flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 5px;
+            background-image: linear-gradient(135deg, #d7d2cc 10%, #304352 100%);
+            overflow: hidden;
+            width: 150px;
+            position: relative;
+            left: 70px;
 
-.dropdown:hover .dropdown_content {
-  display: block;
-}
+        }
+        .years a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            /* background-image: linear-gradient(135deg, #d7d2cc 10%, #304352 100%); */
+
+        }
+        .years a:hover{
+            background-image: linear-gradient(135deg, #243949 10%, #517fa4 100%);
+
+
+        }
+        
+     
+       
         
     </style>
 </head>
 <body>
     <main>
         <header class="banner">
-            <img src="images/banner.png" alt=""> 
+            <img class="brandLogo" src="images/banner.png" alt=""> 
         </header>
         <div class="container">
-            <li class="departments dropdown"><figure><img class="images" src="Images/cslogo.jpeg" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Computer Science</a></b></figcaption>
-            <div class="dropdown_content">
-                <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
+            <div class="subContainer">
+                 <img class="deparImg" src="images/cslogo.jpeg" alt=""><figcaption>
+                    <h3> Computer Science </h3>
+                    <div class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </div>
+                     
+                    <span class="Btn"> <b>Read</b></span>
+
+                 </figcaption>
             </div>
-            
-            </li>
-            <li class="departments dropdown"><figure><img class="images" src="Images/itlogo.png" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Information Technology</a></b></figcaption>
-                <div class="dropdown_content">
-                    <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
-                </div>
-            </li>
-            <li class="departments dropdown"><figure><img class="images" src="Images/aerologo.jpg" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Aeronotics</a></b></figcaption>
-                <div class="dropdown_content">
-                    <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
-                </div>
-            </li>
-            <li class="departments dropdown"><figure><img class="images" src="Images/ecelogo.jpeg" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Electronics and Communication</a></b></figcaption>
-                <div class="dropdown_content">
-                    <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
-                </div>
-            </li>
-            <li class="departments dropdown"><figure><img class="images" src="Images/eeelogo.jpeg" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Electrical and Electronics Engineering</a></b></figcaption>
-                <div class="dropdown_content">
-                    <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
-                </div>
-            </li>
-            <li class="departments dropdown"><figure><img class="images" src="Images/mechlogo.jpeg" alt=""></figure><figcaption><b><a class="dropdown_btn" href="#">Mechanical</a></b></figcaption>
-                <div class="dropdown_content">
-                    <a href="librarymanagement.html" class="years">1<sup>st</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">2<sup>nd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">3<sup>rd</sup>Year</a>
-                    <a href="librarymanagement.html" class="years">4<sup>th</sup>Year</a>
-                </div>
-            </li>
+            <div class="subContainer">
+                <img class="deparImg" src="images/itlogo.png" alt="">
+                <figcaption class="info">
+                    <h3> Information Technology </h3>
+                    <div class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </div>
+                     
+                    
+                    <span class="Btn"> <b>Read</b></span>
+                </figcaption>
+            </div>
+            <div class="subContainer">
+                <img class="deparImg" src="images/aerologo.jpg" alt="">
+                <figcaption class="info">
+                    <h3> Aeronautics </h3>
+                    <span class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </span>
+                     
+                    
+                    <span class="Btn"> <b>Read</b></span>
+
+                </figcaption>
+
+            </div>
+            <div class="subContainer sub">
+                <img class="deparImg" src="images/ecelogo.jpeg" alt="">
+                <figcaption class="info">
+                    <h3> Electronics And Comunications Engineering </h3>
+                    <div class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </div>
+                     
+                    
+                    <span class="Btn"> <b>Read</b></span>
+
+                </figcaption>
+
+            </div>
+            <div class="subContainer sub">
+                <img class="deparImg" src="images/eeelogo.jpeg" alt="">
+                <figcaption class="info">
+                    <h3> Electrical And Electronics Engineering </h3>
+                    <div class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </div>
+                     
+                    
+                    <span class="Btn">Read</span>
+
+                </figcaption>
+
+            </div>
+            <div class="subContainer sub">
+                <img class="deparImg" src="images/mechlogo.jpeg" alt="">
+                <figcaption class="info">
+                    <h3> Mechanical </h3>
+                    <div class="years"> 
+                        <a href="librarymanagement.html">1<sup>st</sup>Year</a>
+                        <a href="librarymanagement.html">2<sup>nd</sup>Year</a>
+                        <a href="librarymanagement.html">3<sup>rd</sup>Year</a>
+                        <a href="librarymanagement.html">4<sup>th</sup>Year</a>
+
+                    </div>
+                     
+                    
+                    <span class="Btn">Read</span>
+
+                </figcaption>
+
+            </div>
+           
         </div>
     </main>
     

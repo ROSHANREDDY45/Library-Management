@@ -10,14 +10,16 @@
 *{
     margin: 0;
     padding: 0;
-    list-style-type : none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
 
 }
 
 body{
-    box-sizing: border-box;
-    font-family: sans-serif;
-    background-color: rgba(247, 229, 229, 0.952);
+    background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
+    
 }
 .banner{
     height:15vh ;
@@ -32,7 +34,7 @@ body{
 .menu_list{
     display: flex;
     justify-content: center;
-    background-color: rgb(66, 59, 59);
+    background-color: whitesmoke;
     font-size: 20px;
     padding: 10px;
     overflow:hidden;
@@ -41,12 +43,14 @@ body{
 .menu_btn{
     text-align:center;
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 14px 20px;
 }
 
 .menu_btn:hover{
-    background-color:rgb(4, 80, 128);
+    background-image: linear-gradient(135deg, #243949 10%, #517fa4 100%);
+    color: whitesmoke;
+    border-radius: 20px;
 }
 .menu_icon{
     position: absolute;
@@ -60,7 +64,7 @@ body{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 6px 0px rgb(0, 0, 0,0.2), 5px 5px 6px 0px rgb(0,0,0,0.19);    border-radius: 20px;
  
 }
 
@@ -72,7 +76,10 @@ body{
   text-align: center;
 }
 
-.dropdown_content a:hover {background-color: #f1f1f1;}
+.dropdown_content a:hover{
+    background-image: linear-gradient(135deg, #243949 10%, #517fa4 100%);
+
+}
 
 .dropdown:hover .dropdown_content {
   display: block;
@@ -83,10 +90,11 @@ body{
     margin-top: 30px;
     background-color: white;
     overflow: hidden;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    cursor: pointer;
 }
 
-.imagelist li{
+.sideList li{
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 20px 15px ;
@@ -95,30 +103,30 @@ body{
 }
 .side_btn{
     padding: 15px 15px 15px 25px;
-    color: rgb(99, 94, 94);
+    color: black;
 }
-.imagelist li:hover{
-    background-color: grey;
-    color: white;
+.side_btn:hover{
+    background-color: black;
+     color: white;
 }
 #subject1:hover{
-    background-color: grey;
+    background-color: black;
     font-weight: 600;
 }
 #subject2:hover{
-    background-color: grey;
+    background-color: black;
     font-weight: 600;
 }
 #subject3:hover{
-    background-color: grey;
+    background-color: black;
     font-weight: 600;
 }
 #subject4:hover{
-    background-color: grey;
+    background-color: black;
     font-weight: 600;
 }
 #subject5:hover{
-    background-color: grey;
+    background-color: black;
     font-weight: 600;
 }
 .sections{
@@ -128,7 +136,9 @@ body{
     padding: 14px 20px;
     background-color: white;
     text-align: center;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    border-radius: 30px;
+
 }
 #section1 h2 {
     color:rgb(4, 80, 128) ;
@@ -146,9 +156,10 @@ body{
 
 }
 .images{
-    width: 230px;
-    height:230px;
+    width: 200px;
+    height:200px;
 }
+
 .container li{
     padding: 40px;
     
@@ -160,12 +171,17 @@ body{
     
 }
 .items{
-    font-size: 20px;
+    font-size: 16px;
+    transition: transform 0.5s ease;
+}
+.items:hover{
+    transform: scale(1.1,1.1);
 }
 @media screen and (min-width:900px) {
     .menu_icon{
         width:0;
     }
+    
     
 }
 @media screen and (min-width:767px) and (max-width:900px) {
@@ -251,6 +267,12 @@ body{
     
     
 }
+@media screen and (min-width: 290px){
+    .menu_bar{
+        margin-top: 20px;
+    }
+    
+}
 </style>
 </head>
 <body>
@@ -277,7 +299,7 @@ body{
     </nav>
 
     <div class="side_bar">
-        <ul class="imagelist">
+        <ul class="sideList">
             <li class="side_btn" id="tutorials" style="background-image: url(Icons/tutorials_icons.webp);"> <b>Tutorials</b></li><hr />
             <li class="side_btn" id="subject1" style="background-image: url(icons/subjects.png);"> Subject1</li><hr />
             <li class="side_btn" id="subject2"style="background-image: url(icons/subjects.png);"> Subject2</li><hr />
